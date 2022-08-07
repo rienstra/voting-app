@@ -13,9 +13,9 @@
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
-    <body class="font-sans text-gray-900 text-sm">
+    <body class="font-sans bg-gray-background text-gray-900 text-sm">
         <header class="flex items-center justify-between px-8 py-4">
-            <a href="#">Votingapp Logo</a>
+            <a href="#"><img src="{{ asset('/images/votelogo1.svg')}}" alt="votelogo" width="150px"></a>
             <div class="flex items-center">
                 @if (Route::has('login'))
                     <div class="px-6 py-4">
@@ -41,5 +41,39 @@
                 <img src="https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp" alt="avatar" class="w-10 h-10 rounded-full">
             </div>
         </header>
+
+        <main class="container mx-auto max-w-custom flex" style="max-width: 1000px;">
+            <div class="w-70 mr-5">
+                Add idea form goes here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Explicabo, praesentium saepe. A corporis delectus doloribus ducimus, exercitationem, harum id illum quaerat quidem reprehenderit sint totam. Facilis fuga labore nulla. Assumenda.
+            </div>
+            <div class="w-175">
+                <nav class="flex items-center justify-between text-sm">
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li>
+                            <a href="#" class="border-b-4 pb-3 border-blue">All Ideas (87)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Considering (6)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">In Progress (1)</a>
+                        </li>
+                    </ul>
+
+                    <ul class="flex uppercase font-semibold border-b-4 pb-3 space-x-10">
+                        <li>
+                            <a href="#" class="border-b-4 pb-3 border-blue">Implemented (10)</a>
+                        </li>
+                        <li>
+                            <a href="#" class="text-gray-400 transition duration-150 ease-in border-b-4 pb-3 hover:border-blue">Closed (55)</a>
+                        </li>
+                    </ul>
+                </nav>
+
+                <div class="mt-8">
+                    {{ $slot }}
+                </div>
+            </div>
+        </main>
     </body>
 </html>
