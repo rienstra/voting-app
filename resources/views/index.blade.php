@@ -109,7 +109,7 @@
                 <div class="mx-4">
                     <h4 class="text-xl font-semibold">
                         <a href="#" class="hover:underline">
-                            Another Title
+                            When a title meets a title
                         </a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
@@ -172,7 +172,7 @@
                 </a>
                 <div class="mx-4">
                     <h4 class="text-xl font-semibold">
-                        <a href="#" class="hover:underline">A random title can go here</a>
+                        <a href="#" class="hover:underline">Titles can't be random</a>
                     </h4>
                     <div class="text-gray-600 mt-3 line-clamp-3">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut commodi, dolores ex id ipsa nesciunt, pariatur quaerat quisquam repudiandae sequi totam ullam unde ut! Error esse ipsa magni sint. Dolorem doloremque, in labore magnam nemo nihil qui sapiente sequi vel voluptatibus. Et iusto quam veniam. Libero nesciunt quasi velit. Aliquid aperiam, cumque doloremque excepturi laudantium minima molestiae, omnis optio, quae quia quos sed veniam. Accusamus ad aliquid beatae debitis, deleniti dolor, dolore doloremque dolorum esse eveniet expedita explicabo facilis harum id illum ipsa magni molestias nihil sit tenetur ullam voluptas voluptate. Accusantium cumque enim fugiat iure iusto, molestiae numquam quibusdam.
