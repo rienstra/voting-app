@@ -67,15 +67,27 @@
 
     <div class="buttons-container flex items-center justify-between mt-6">
         <div class="flex items-center space-x-4 ml-6">
-            <div class="relative">
-                <button type="button"
-                        class="flex items-center justify-center w-32 h-11 text-sm bg-blue hover:bg-blue-hover text-white font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-4 py-3">
+            <div
+                x-data="{ isOpen: false }"
+                class="relative"
+            >
+                <button
+                    @click="isOpen = ! isOpen"
+                    type="button"
+                    class="flex items-center justify-center w-32 h-11 text-sm bg-blue hover:bg-blue-hover text-white font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-4 py-3">
                     Reply
                 </button>
-                <div class="absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
+                <div
+                    x-cloak
+                    x-show="isOpen"
+                    x-transition.origin.top.left.duration.100ms
+                    @click.away="isOpen = false"
+                    @keydown.escape.window="isOpen = false"
+                    class="absolute z-10 w-104 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2"
+                >
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div>
-                            <textarea name="post_comment" id="post_comment" cols="30" rows="4" class="w-full text-sm bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2" placeholder="Go ahead, don't be shy. Share your thoughts..."></textarea>
+                            <textarea name="post_comment" id="post_comment" cols="30" rows="4" class="w-full text-sm bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2 font-normal" placeholder="Go ahead, don't be shy. Share your thoughts..."></textarea>
                         </div>
 
                         <div class="flex items-center space-x-3">
@@ -94,9 +106,15 @@
                 </div>
             </div>
 
-            <div class="relative ">
-                <button type="button"
-                        class="flex items-center justify-center w-36 h-11 text-sm bg-gray-200 hover:bg-gray-300 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-4 py-3">
+            <div
+                x-data="{ isOpen: false }"
+                class="relative"
+            >
+                <button
+                    @click="isOpen = ! isOpen"
+                    type="button"
+                    class="flex items-center justify-center w-36 h-11 text-sm bg-gray-200 hover:bg-gray-300 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-4 py-3"
+                >
                     <span>Set Status</span>
                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                          stroke="currentColor" class="w-4 h-4 ml-2">
@@ -104,7 +122,14 @@
                     </svg>
                 </button>
 
-                <div class=" absolute z-20 w-76 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2">
+                <div
+                    x-cloak
+                    x-show="isOpen"
+                    x-transition.origin.top.left.duration.100ms
+                    @click.away="isOpen = false"
+                    @keydown.escape.window="isOpen = false"
+                    class="absolute z-20 w-76 text-left font-semibold text-sm bg-white shadow-dialog rounded-xl mt-2"
+                >
                     <form action="#" class="space-y-4 px-4 py-6">
                         <div class="space-y-2">
                             <div>
@@ -139,10 +164,7 @@
                             </div>
                         </div>
                         <div>
-                            <textarea name="update_comment" id="update_comments" cols="30" rows="3"
-                                      class="w-full text-sm bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2 font-normal"
-                                      placeholder="Add an update comment (optional)">
-                            </textarea>
+                            <textarea name="update_comment" id="update_comments" cols="30" rows="3" class="w-full text-sm bg-gray-100 rounded-xl placeholder-gray-900 border-none px-4 py-2 font-normal" placeholder="Add an update comment (optional)"></textarea>
                         </div>
                         <div class="flex items-center justify-between space-x-3">
                             <button type="button" class="flex items-center justify-center w-1/2 h-11 text-xs bg-gray-200 hover:bg-gray-300 font-semibold rounded-xl border border-gray-200 hover:border-gray-400 transition duration-150 ease-in px-4 py-3">
@@ -201,15 +223,28 @@
                             <div>&bull;</div>
                             <div>10 hours ago</div>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <button class="relative border transition duration-150 ease-in bg-gray-100 hover:bg-gray-200 rounded-full h-7 py-2 px-3">
+                        <div
+                            x-data="{ isOpen: false }"
+                            class="flex items-center space-x-2"
+                        >
+                            <button
+                                @click="isOpen = ! isOpen"
+                                class="relative border transition duration-150 ease-in bg-gray-100 hover:bg-gray-200 rounded-full h-7 py-2 px-3"
+                            >
                                 <svg fill="currentColor"
                                      width="24"
                                      height="6"
                                 >
                                     <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
                                           style="color: rgba(163, 163, 163, 5)">
-                                        <ul class="hidden absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                                        <ul
+                                            x-cloak
+                                            x-show="isOpen"
+                                            x-transition.origin.top.left.duration.100ms
+                                            @click.away="isOpen = false"
+                                            @keydown.escape.window="isOpen = false"
+                                            class="absolute w-44 z-10 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8"
+                                        >
                                             <li>
                                                 <a href="#" class="hover:bg-gray-100 px-5 py-3 transition block duration-150 ease-in">
                                                     Mark as Spam
@@ -249,15 +284,21 @@
                             <div>&bull;</div>
                             <div>10 hours ago</div>
                         </div>
-                        <div class="flex items-center space-x-2">
-                            <button class="relative border transition duration-150 ease-in bg-gray-100 hover:bg-gray-200 rounded-full h-7 py-2 px-3">
+                        <div
+                            class="flex items-center space-x-2"
+                        >
+                            <button
+                                class="relative border transition duration-150 ease-in bg-gray-100 hover:bg-gray-200 rounded-full h-7 py-2 px-3"
+                            >
                                 <svg fill="currentColor"
                                      width="24"
                                      height="6"
                                 >
                                     <path d="M2.97.061A2.969 2.969 0 000 3.031 2.968 2.968 0 002.97 6a2.97 2.97 0 100-5.94zm9.184 0a2.97 2.97 0 100 5.939 2.97 2.97 0 100-5.939zm8.877 0a2.97 2.97 0 10-.003 5.94A2.97 2.97 0 0021.03.06z"
                                           style="color: rgba(163, 163, 163, 5)">
-                                        <ul class="hidden absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8">
+                                        <ul
+                                            class="hidden absolute w-44 text-left font-semibold bg-white shadow-dialog rounded-xl py-3 ml-8"
+                                        >
                                             <li>
                                                 <a href="#" class="hover:bg-gray-100 px-5 py-3 transition block duration-150 ease-in">
                                                     Mark as Spam
